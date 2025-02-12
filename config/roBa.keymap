@@ -73,7 +73,9 @@
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 LA(LC(SPACE))  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings =
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
+                <&inc_dec_kp MINUS MINUS>;
         };
 
         NUM {
@@ -87,10 +89,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))     &trans            &kp LC(TAB)          &trans                       &trans  &trans          &kp UP_ARROW    &trans           &trans
-&kp HOME        &kp LG(LEFT_ARROW)  &kp LC(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp END  &trans      &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&kp LEFT_SHIFT  &kp LC(LEFT_ARROW)  &trans            &kp LC(RIGHT_ARROW)  &trans   &trans      &trans  &trans  &trans          &trans          &trans           &trans
-&trans          &trans              &trans            &trans               &trans   &trans      &trans  &trans                                                   &trans
+&kp ESCAPE      &kp LC(LS(TAB))     &trans            &kp LC(TAB)          &trans                       &trans          &trans          &kp UP_ARROW    &trans           &trans
+&kp HOME        &kp LG(LEFT_ARROW)  &kp LC(UP_ARROW)  &kp LG(RIGHT_ARROW)  &kp END  &trans      &trans  &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp LEFT_SHIFT  &kp LC(LEFT_ARROW)  &trans            &kp LC(RIGHT_ARROW)  &trans   &trans      &trans  &trans          &trans          &trans          &trans           &trans
+&trans          &trans              &trans            &trans               &trans   &trans      &trans  &kp LEFT_SHIFT                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -107,10 +109,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans    &trans    &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &mkp MB2  &mkp MB1  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans    &trans    &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans    &trans    &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans            &trans    &trans                      &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &kp LC(UP_ARROW)  &mkp MB1  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans            &trans    &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans            &trans    &trans  &trans      &trans  &trans                                &trans
             >;
         };
 
